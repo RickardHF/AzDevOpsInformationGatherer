@@ -17,7 +17,7 @@ function Get-AzureDevOpsAmountOfChangesets {
     
     Write-Information "Fetching projects from $projectUri"
     $projects = (Invoke-RestMethod -Uri $projectUri -Method Get -Headers $headers).value
-    Write-Host $projects        
+
     Write-Information "Found $($projects.count) projects"
     # List amount of changesets for each project
     $changesets = @()
